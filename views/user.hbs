@@ -1,0 +1,18 @@
+<article>
+    {{!-- <h2>User</h2> --}}
+
+    {{#if id}}
+        <h2>{{name}}</h2>
+        <h2>{{id}}</h2>
+    {{else}}
+        <h1>Users List</h1>
+            
+        {{#each users}}
+            <table border="1">
+                <tr><th>Nazwisko</th><th>Ulica</th><th>Kod</th><th>Miasto</th><th>Zipcode</th><th>Phone</th><th>Website</th></tr>
+                <tr><td>{{name}}</td><td>{{address.street}}</td><td>{{address.suite}}</td><td>{{address.city}}</td><td>{{address.zipcode}}</td><td>{{phone}}</td><td><a href="">{{website}}</a></td></tr>
+            </table>
+        {{/each}}
+    {{/if}}
+</article>
+
